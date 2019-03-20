@@ -1,4 +1,9 @@
 language: android
+
+before_install:
+- yes | sdkmanager "platforms;android-28.0.3"
+- chmod +x gradlew
+
 android:
   components:
     - tools
@@ -18,6 +23,8 @@ env:
   global:
   # install timeout: 8 minutes
   - ADB_INSTALL_TIMEOUT=8
+
+
 
 before_script:
 
